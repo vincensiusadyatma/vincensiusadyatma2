@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'inter', sans-serif;
+}
+
+
+.navbar-fixed{
+@apply fixed z-[999] bg-white bg-opacity-80 dark:bg-dark dark:bg-opacity-70 ;
+backdrop-filter : blur(5px);
+box-shadow : 1px 1px 2px rgba(0,0,0,0.2)
+}
+
+.muncul{
+@apply fixed z-[999] bg-white bg-opacity-80;
+backdrop-filter : blur(5px);
+box-shadow : 1px 1px 2px rgba(0,0,0,0.2)
+}
+.hamburger-line{
+@apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1){
+@apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2){
+@apply -scale-0;
+}
+
+.hamburger-active > span:nth-child(3){
+@apply -rotate-45;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle{
+@apply translate-x-3
+}
+
+#dark-toggle:checked ~ label div.wadah-toggle{
+@apply bg-green-500
+}
